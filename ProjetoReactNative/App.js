@@ -8,6 +8,7 @@ import Ex4 from "./src/Ex4";
 import Ex5 from "./src/Ex5";
 import Ex6 from "./src/Ex6";
 import Desafio from "./src/Desafio";
+import CoreComponents from "./src/CoreComponents";
 
 
 const App = () => {
@@ -18,7 +19,8 @@ const App = () => {
     // <Ex4></Ex4>
     // <Ex5></Ex5>
     // <Ex6></Ex6>
-    <Desafio></Desafio>
+    // <Desafio></Desafio>
+    <CoreComponents></CoreComponents>
   );
 };
 
