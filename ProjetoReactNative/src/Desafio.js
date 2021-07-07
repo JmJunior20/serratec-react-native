@@ -13,9 +13,7 @@ const Desafio = () => {
           </View>
           <View style={styles.containerOne}>
             <View style={styles.box2}/>
-          </View>
-          <View style={styles.container1}>
-            <View style={styles.box3}/>
+            <View style={styles.box3}/>            
           </View>
           <View style={styles.containerLine}>
             <View style={styles.container2}>
@@ -51,8 +49,7 @@ const styles = StyleSheet.create({
       justifyContent: "center",
     },
     containerOne: {
-        flexDirection: "row",
-        justifyContent: "space-around",
+      alignItems: "center",
       },
     container2: {
         flexDirection: "row",
@@ -80,6 +77,7 @@ const styles = StyleSheet.create({
         width: 150,
         height: 30,
         backgroundColor: '#F5A623',
+        marginTop: 20,
       },
       box4: {
           width: '50%',
