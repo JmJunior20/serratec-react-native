@@ -9,6 +9,9 @@ import Ex5 from "./src/Ex5";
 import Ex6 from "./src/Ex6";
 import Desafio from "./src/Desafio";
 import CoreComponents from "./src/CoreComponents";
+import TesteSwitch from "./src/TesteSwitch";
+import CoreComponents2 from "./src/CoreComponents2";
+import DesafioPerfil from "./src/DesafioPerfil";
 
 
 const App = () => {
@@ -20,7 +23,10 @@ const App = () => {
     // <Ex5></Ex5>
     // <Ex6></Ex6>
     // <Desafio></Desafio>
-    <CoreComponents></CoreComponents>
+    // <CoreComponents></CoreComponents>
+    // <TesteSwitch></TesteSwitch>
+    // <CoreComponents2></CoreComponents2>
+    <DesafioPerfil></DesafioPerfil>
   );
 };
 
