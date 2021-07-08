@@ -12,18 +12,21 @@ const TesteSwitch = () => {
             <Text style={styles.texto}>{numero}</Text>
 
                 <TouchableOpacity
+                disabled={!estaLigado}
                 style={styles.botao}
                 onPress={() => setNumero(numero + 1)}>
                     <Text style={styles.textoBotao}>Próximo</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                disabled={!estaLigado}
                 style={styles.botao}
                 onPress={() => setNumero(numero - 1)}>
                     <Text style={styles.textoBotao}>Anterior</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                disabled={!estaLigado}
                 style={styles.botao}
                 onPress={() => setNumero(0)}>
                     <Text style={styles.textoBotao}>Reset</Text>
@@ -39,7 +42,7 @@ const TesteSwitch = () => {
 
                 <Switch value={estaLigado}
                     onValueChange={() => setEstaLigado(!estaLigado)}
-                />   
+                />
         </View>
     );    
 };
@@ -50,6 +53,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     texto: {
         fontSize: 50,
         marginBottom: 20,
@@ -62,13 +66,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'blue',
         marginBottom: 15,
         borderRadius: 20,
-      },
-      textoBotao: {
+    },
+    textoBotao: {
         color: 'white',
         fontWeight: 'bold',
         fontSize: 22,
         letterSpacing: 5,
-      },
+    },
 });
 
 export default TesteSwitch;
