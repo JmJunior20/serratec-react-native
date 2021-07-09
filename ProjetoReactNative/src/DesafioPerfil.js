@@ -22,7 +22,7 @@ const DesafioPerfil = ({ navigation }) => {
             <TouchableOpacity
                 style={styles.botao}
                 title="TesteSwitch"
-                onPress={() => navigation.navigate('Contador')}>
+                onPress={() => navigation.openDrawer('Contador')}>
                     <Text style={styles.textoBotao}>Próximo</Text>
             </TouchableOpacity> 
             <ScrollView style={styles.sobre}>

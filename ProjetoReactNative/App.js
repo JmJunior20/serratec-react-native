@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Ex from "./src/Ex";
 import Ex2 from "./src/Ex2";
@@ -16,11 +17,17 @@ import CoreComponents2 from "./src/CoreComponents2";
 import DesafioPerfil from "./src/DesafioPerfil";
 
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      {/* <Stack.Navigator initialRouteName="Perfil">
+        
+        <Stack.Screen name="Perfil" component={DesafioPerfil} />
+        <Stack.Screen name="Contador" component={TesteSwitch} />
+      </Stack.Navigator> */}
+      <Drawer.Navigator initialRouteName="Perfil">
         {/* <Ex></Ex> */}
         {/* <Ex2></Ex2> */}
         {/* <Ex3></Ex3> */}
@@ -32,9 +39,9 @@ const App = () => {
         {/* <TesteSwitch></TesteSwitch> */}
         {/* <CoreComponents2></CoreComponents2> */}
         {/* <DesafioPerfil></DesafioPerfil> */}
-        <Stack.Screen name="Perfil" component={DesafioPerfil} />
-        <Stack.Screen name="Contador" component={TesteSwitch} />
-      </Stack.Navigator>
+        <Drawer.Screen name="Perfil" component={DesafioPerfil} />
+        <Drawer.Screen name="Contador" component={TesteSwitch} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 };
