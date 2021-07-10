@@ -1,10 +1,17 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 import styles from './styles';
 
+import getPosts from '../../repository/postsRepository';
+
 const Posts = () => {
-  return <View />;
+
+    return (
+        <View>
+            <Text>Post Screen</Text>
+        </View>
+    )
 }
 
 export default Posts;
