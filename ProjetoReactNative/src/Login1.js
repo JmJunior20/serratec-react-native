@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, Button, TouchableOpacity, TextInput } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 
-const Login1 = () => {
+const Login1 = ({navigation}) => {
     
-    const [user, setUser] = useState('')
-    const [pass, setPass] = useState('')
+    const [nome, setNome] = useState('')
+    const [senha, setSenha] = useState('')
 
     return (
         <View style={styles.container}>           
@@ -13,33 +12,33 @@ const Login1 = () => {
             <Text style={styles.texto}>LOGIN</Text>
             <TextInput 
                 style={styles.login__input}
-                value={user}
-                onChangeText={setUser} 
-                placeholder='Usuário:' 
+                value={nome}
+                onChangeText={setNome} 
+                placeholder='Digite seu usuário' 
             />
             <TextInput 
                 style={styles.login__input} 
-                value={pass}
-                onChangeText={setPass} 
-                placeholder='Senha:' 
+                value={senha}
+                onChangeText={setSenha} 
+                placeholder='Digite sua senha' 
                 secureTextEntry={true} 
             />
             <TouchableOpacity 
             style={styles.login__button} 
-            onPress={() => login(user, pass, {navigation})}>
+            onPress={() => login(nome, senha, {navigation})}>
                     <Text style={styles.login__buttonText}>Entrar</Text>
             </TouchableOpacity>
         </View>
     );    
 };
 
-function login(user, pass, {navigation}) {
-    const realUser = 'Junior';
-    const realPass = '12345';
-    if (user != realUser || pass != realPass) {
+function login(nome, senha, {navigation}) {
+    const User = 'Junior';
+    const Pass = '12345';
+    if (nome != User || senha != Pass) {
         alert('Usuário ínvalido')
     } else {
-        navigation.jumpTo('DesafioPerfil')
+        navigation.jumpTo('DesafioPerfil');
     }
 };
 
@@ -55,13 +54,15 @@ const styles = StyleSheet.create({
         fontSize: 30,
         marginBottom: 20,
         color: "white",
+        fontWeight:"bold",
     },
     login__input:{
         backgroundColor: "#fff",
         fontSize: 19,
         padding: 7,
         marginBottom: 15,
-        width: "100%",
+        width: "90%",
+        borderRadius: 20,
     },
     login__button:{
         justifyContent: 'center',
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     },
     login__buttonText:{
         fontWeight:"bold",
-        fontSize: 22,
+        fontSize: 25,
         color:"white"
     }
     

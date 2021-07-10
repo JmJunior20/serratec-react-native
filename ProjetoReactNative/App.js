@@ -29,7 +29,7 @@ const Tab = createBottomTabNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="Perfil">
+      {/* <Stack.Navigator initialRouteName="Login1">
         
         <Stack.Screen name="Perfil" component={DesafioPerfil} />
         <Stack.Screen name="Contador" component={TesteSwitch} />
@@ -50,7 +50,15 @@ const App = () => {
         tabBarOptions={{
           activeTintColor: '#e91e63',
         }}>
-
+          <Tab.Screen 
+            name="Login1" 
+            component={Login1} 
+            options={{
+              tabBarIcon: ({color}) => (
+              <Login name="login" color={color} size={25} />
+              ),
+            }}
+          />
           <Tab.Screen 
             name="Perfil" 
             component={DesafioPerfil} 
@@ -70,7 +78,7 @@ const App = () => {
               ),
             }}
           />
-          <Tab.Screen 
+          {/* <Tab.Screen 
             name="Login" 
             component={Login2} 
             options={{
@@ -78,16 +86,8 @@ const App = () => {
               <Login name="login" color={color} size={25} />
               ),
             }}
-          />
-          <Tab.Screen 
-            name="Login1" 
-            component={Login1} 
-            options={{
-              tabBarIcon: ({color}) => (
-              <Login name="login" color={color} size={25} />
-              ),
-            }}
-          />
+          /> */}
+          
         </Tab.Navigator>        
       {/* </Drawer.Navigator> */}
     </NavigationContainer>
