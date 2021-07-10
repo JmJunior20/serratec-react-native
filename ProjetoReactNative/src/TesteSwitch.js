@@ -37,7 +37,7 @@ const TesteSwitch = () => {
                     onChangeText={setTexto}
                     placeholder="Insira seu nome"
                     // keyboardType="numeric"
-                    style={{backgroundColor: 'orange', width: '100%'}}
+                    style={{backgroundColor: 'gray', width: '100%'}}
                 />
 
                 <Switch value={estaLigado}
@@ -52,11 +52,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: "black",
     },
 
     texto: {
         fontSize: 50,
         marginBottom: 20,
+        color: "white",
     },
     botao: {
         justifyContent: 'center',
