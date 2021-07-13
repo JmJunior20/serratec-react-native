@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 
-const Login1 = ({navigation}) => {
+const Login1 = ({ navigation }) => {
     
     const [nome, setNome] = useState('')
     const [senha, setSenha] = useState('')
@@ -36,9 +36,9 @@ function login(nome, senha, {navigation}) {
     const User = 'Junior';
     const Pass = '12345';
     if (nome != User || senha != Pass) {
-        alert('Usuário ínvalido')
+        alert('Usuário ínvalido ou senha inválido!')
     } else {
-        navigation.jumpTo('DesafioPerfil');
+        navigation.jumpTo('Perfil');
     }
 };
 
