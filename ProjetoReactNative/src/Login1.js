@@ -28,6 +28,11 @@ const Login1 = ({ navigation }) => {
             onPress={() => login(nome, senha, {navigation})}>
                     <Text style={styles.login__buttonText}>Entrar</Text>
             </TouchableOpacity>
+            <TouchableOpacity 
+            style={styles.cadastro__button} 
+            onPress={() => login(nome, senha, {navigation})}>
+                    <Text style={styles.cadastro__buttonText}>Cadastrar</Text>
+            </TouchableOpacity>
         </View>
     );    
 };
@@ -74,6 +79,20 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
     login__buttonText:{
+        fontWeight:"bold",
+        fontSize: 25,
+        color:"white"
+    },
+    cadastro__button:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '80%',
+        height: 50,
+        backgroundColor: 'gray',
+        marginBottom: 15,
+        borderRadius: 20,
+    },
+    cadastro__buttonText:{
         fontWeight:"bold",
         fontSize: 25,
         color:"white"
